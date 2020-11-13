@@ -4,7 +4,7 @@ means that each picture has a independent probability p of being duplicated in t
 Input:
 list of image names :: str
 duplicate probability p :: float
-maximum number of repeat per image: n
+maximum number of repeat per image n :: int
 
 Output: list of duplicated data file name with extension .jpg
 Example output: [1.jpg, 1.jpg, 2,jpg, ....]
