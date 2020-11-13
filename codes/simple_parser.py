@@ -1,6 +1,19 @@
+"""
+Function: get train data fro
+
+Input: Path to annotate.txt
+Output:
+Train images
+Classes count
+Classes mapping
+
+"""
+
+
 import cv2
 import numpy as np
-
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 def get_data(input_path):
 	found_bg = False
 	all_imgs = {}
@@ -41,7 +54,7 @@ def get_data(input_path):
 				all_imgs[filename]['bboxes'] = []
 				all_imgs[filename]['imageset'] = 'test'
 
-			all_imgs[filename]['bboxes'].append({'class': class_name, 'x1': int(x1), 'x2': int(x2), 'y1': int(y1), 'y2': int(y2)})
+			all_imgs[filename]['bboxes'].append({'class': class_name, 'x1': int(float(x1)), 'x2': int(float(x2)), 'y1': int(float(y1)), 'y2': int(float(y2))})
 
 
 		all_data = []
@@ -58,4 +71,4 @@ def get_data(input_path):
 		
 		return all_data, classes_count, class_mapping
 
-
+train_imgs, classes_count, class_mapping  = get_data("annotate.txt")
