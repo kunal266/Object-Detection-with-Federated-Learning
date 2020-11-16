@@ -5,15 +5,20 @@ vertical flips,
 rotation with random angle 0, 90, 180, 270
 
 Input: Path to image data, choice of type of augmentation
-Output: Augmented data
-
+Output:
+img :: list of ndarray (width, height, 3)
+img_aug :: list of dict{bboxes, width, imageset, filepath, height}
+QUESTIONS: DO WE NEED TO SAVE AUGMENTED PICTURES????????
 """
 
 import cv2
 import numpy as np
 import copy
+import simple_parser as sp
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+import config
+import random
 
 
 def augment(img_data, config, augment=True):
@@ -84,4 +89,28 @@ def augment(img_data, config, augment=True):
 	img_data_aug['width'] = img.shape[1]
 	img_data_aug['height'] = img.shape[0]
 	return img_data_aug, img
-augment("", config = True)
+
+
+C = config.Config()
+C.use_horizontal_flips = True
+C.use_vertical_flips = True
+C.rot_90 = True
+
+# for reproducibility
+random.seed(603008)
+
+#############AFTER DUPLICATION###################
+dup_train_img_aug = [] # list of dict
+dup_train_img = [] # list of ndarray
+for i in range(len(sp.dup_train_imgs)):
+	img_aug, img = augment(sp.dup_train_imgs[i], C, augment=True)
+	dup_train_img_aug.append(img_aug)
+	dup_train_img.append(img)
+print("FINISHED AUGMENTATION WITH TRAIN DATA")
+
+
+############AFTER AUGMENTATION####################
+train_data = sp.dup_train_imgs.copy() + dup_train_img_aug
+print(len(train_data))
+##################################################
+

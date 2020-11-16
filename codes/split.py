@@ -30,7 +30,7 @@ val_2007fname = np.loadtxt(valfile, dtype= np.str,delimiter=' ')
 test_2007fname = np.loadtxt(testfile, dtype= np.str,delimiter=' ')
 print("Number of train images in VOC 2007 is", train_2007fname.shape[0])
 print("Number of validation images in VOC 2007 is",val_2007fname.shape[0])
-print("Number of validation images in VOC 2007 is",test_2007fname.shape[0])
+print("Number of test images in VOC 2007 is",test_2007fname.shape[0])
 
 # concatenate 2007 and 2012 image file name
 train = list(np.concatenate([train_2007fname, train_2012fname]))

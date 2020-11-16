@@ -70,5 +70,8 @@ def get_data(input_path):
 		
 		return all_data, classes_count, class_mapping
 
-train_imgs, classes_count, class_mapping  = get_data("annotate.txt")
+train_imgs, classes_count, class_mapping  = get_data("annotate.txt") # original train and val
+dup_train_imgs, dup_classes_count, dup_class_mapping  = get_data("dup-train-annotate.txt") # dup train
+val_imgs, val_classes_count, val_class_mapping  = get_data("val-annotate.txt") # val
 
+###############WHY VAL IMG IS OF SIZE 13918##############
