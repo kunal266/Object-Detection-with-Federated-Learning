@@ -4,3 +4,4 @@ codes/*.csv
 *.xml
 *.jpg
 codes/*.txt
+codes/clients

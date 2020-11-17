@@ -1,4 +1,5 @@
-from keras import backend as K
+# from keras import backend as K
+# comment out this because tf 1.0 not supporting tf.Contrib
 import math
 
 class Config:

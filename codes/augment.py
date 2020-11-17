@@ -108,9 +108,8 @@ for i in range(len(sp.dup_train_imgs)):
 	dup_train_img.append(img)
 print("FINISHED AUGMENTATION WITH TRAIN DATA")
 
-
 ############AFTER AUGMENTATION####################
 train_data = sp.dup_train_imgs.copy() + dup_train_img_aug
-print(len(train_data))
+print("NUMBER OF TRAIN IMAGES AFTER AUGMENTATION AND DUPLICATION IS",len(train_data))
 ##################################################
 

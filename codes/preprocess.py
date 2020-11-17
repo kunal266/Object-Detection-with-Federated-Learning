@@ -56,14 +56,12 @@ for i in range(len(data)):
         dup_train = dup_train.append(data.iloc[i])
     elif data['format'][i].split("/")[-1].split(",")[0] in split.val:
         val = val.append(data.iloc[i])
-    else:
+    elif data['format'][i].split("/")[-1].split(",")[0] in split.test:
         test = test.append(data.iloc[i])
 
 dup_train.to_csv('dup-train-annotate.txt', header=None, index=None, sep=' ')
 val.to_csv('val-annotate.txt', header=None, index=None, sep=' ')
-
-#########CHECK NUMBER OF VAL IMAGE IN SET#############
-#######RERUN THIS#############
+# test.to_csv('test-annotate.txt', header=None, index=None, sep=' ')
 
 
 
