@@ -64,7 +64,6 @@ for id in CID:
     # print(values)
     # ax = sns.barplot(x=values, y=names)
     ax = plt.barh(names, values)
-    plt.xlim(0, 1300)
     # ax.set_title('Histogram of Bounding Box Classes For Client ID' + str(id))
     # ax.set_xlabel('Class Count')
     # ax.set_ylabel('Class Name')

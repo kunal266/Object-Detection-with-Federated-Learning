@@ -3,22 +3,23 @@ Function: augment train data with 3 choices for augment:
 horizontal flips,
 vertical flips,
 rotation with random angle 0, 90, 180, 270
+Saving augmented pictures to local
 
 Input: Path to image data, choice of type of augmentation
-Output:
-img :: list of ndarray (width, height, 3)
-img_aug :: list of dict{bboxes, width, imageset, filepath, height}
-QUESTIONS: DO WE NEED TO SAVE AUGMENTED PICTURES????????
+Output: train_data :: list of dicts, containing all duplicated and augmented image information
+For augmented data, the image file name contains a at the beginnning of original file name
+
 """
 
 import cv2
 import numpy as np
 import copy
-import simple_parser as sp
+
 import os
 os.environ["CUDA_VISIBLE_DEVICES"] = "0"
 import config
 import random
+import duplicate as dp
 
 
 def augment(img_data, config, augment=True):
@@ -32,6 +33,7 @@ def augment(img_data, config, augment=True):
 	img = cv2.imread(img_data_aug['filepath'])
 
 	if augment:
+		# img_data_aug['filepath'] = img_data_aug['filepath'] + "AUG" # mark augmentation remark
 		rows, cols = img.shape[:2]
 
 		if config.use_horizontal_flips and np.random.randint(0, 2) == 0:
@@ -98,18 +100,19 @@ C.rot_90 = True
 
 # for reproducibility
 random.seed(603008)
-
-#############AFTER DUPLICATION###################
-dup_train_img_aug = [] # list of dict
+#############DUPLICATION + AUGMENTATION###################
+aug_dup_train_img= [] # list of dict
 dup_train_img = [] # list of ndarray
-for i in range(len(sp.dup_train_imgs)):
-	img_aug, img = augment(sp.dup_train_imgs[i], C, augment=True)
-	dup_train_img_aug.append(img_aug)
-	dup_train_img.append(img)
+savepath = "data/VOCtrainval-0712/JPEGImages/"
+for i in range(len(dp.duplicated)):
+	img_aug, img = augment(dp.duplicated[i], C, augment=True)
+	cv2.imwrite(savepath + 'a' + img_aug['filepath'].split('/')[-1], img) # save file with name
+	img_aug['filepath'] = savepath + 'a' + img_aug['filepath'].split('/')[-1]# change file path in img_aug
+	aug_dup_train_img.append(img_aug)  # list of dict
+	print("SAVING IMG" + img_aug['filepath'].split('/')[-1] + "AT" + savepath )
 print("FINISHED AUGMENTATION WITH TRAIN DATA")
 
-############AFTER AUGMENTATION####################
-train_data = sp.dup_train_imgs.copy() + dup_train_img_aug
+
+train_data = dp.duplicated.copy() + aug_dup_train_img # return list of dicts
 print("NUMBER OF TRAIN IMAGES AFTER AUGMENTATION AND DUPLICATION IS",len(train_data))
 ##################################################
-
