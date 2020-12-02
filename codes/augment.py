@@ -106,8 +106,8 @@ dup_train_img = [] # list of ndarray
 savepath = "data/VOCtrainval-0712/JPEGImages/"
 for i in range(len(dp.duplicated)):
 	img_aug, img = augment(dp.duplicated[i], C, augment=True)
-	cv2.imwrite(savepath + 'a' + img_aug['filepath'].split('/')[-1], img) # save file with name
-	img_aug['filepath'] = savepath + 'a' + img_aug['filepath'].split('/')[-1]# change file path in img_aug
+	cv2.imwrite(savepath + 'a' + str(i) + img_aug['filepath'].split('/')[-1], img) # save file with unique name per augmentation
+	img_aug['filepath'] = savepath + 'a'  + str(i) + img_aug['filepath'].split('/')[-1]# change file path in img_aug
 	aug_dup_train_img.append(img_aug)  # list of dict
 	print("SAVING IMG" + img_aug['filepath'].split('/')[-1] + "AT" + savepath )
 print("FINISHED AUGMENTATION WITH TRAIN DATA")

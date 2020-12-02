@@ -234,7 +234,7 @@ def calc_rpn(C, img_data, width, height, resized_width, resized_height, img_leng
 def get_anchor_gt(all_img_data, C, img_length_calc_function, mode='train'):
     if mode == 'train':
         np.random.shuffle(all_img_data)
-        for img in all_img_data:
+        for img_data in all_img_data:
             img_data_aug = img_data
             x_img = cv2.imread(img_data['filepath'])
             (width, height) = (img_data_aug['width'], img_data_aug['height'])
@@ -265,7 +265,10 @@ def get_anchor_gt(all_img_data, C, img_length_calc_function, mode='train'):
             y_rpn_cls = np.transpose(y_rpn_cls, (0, 2, 3, 1))
             y_rpn_regr = np.transpose(y_rpn_regr, (0, 2, 3, 1))
 
-            yield np.copy(x_img), [np.copy(y_rpn_cls), np.copy(y_rpn_regr)], img_data_aug
+            # add one more dimension for client ID
+            ID = img_data['id']
+
+            yield np.copy(x_img), [np.copy(y_rpn_cls), np.copy(y_rpn_regr)], img_data_aug, ID
 
 
 
