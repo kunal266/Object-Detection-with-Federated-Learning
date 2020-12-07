@@ -1,23 +1,30 @@
+import tensorflow as tf
 
+def toy():
+    for i in range(3):
+        yield (i, i+1)
 
-def fedGen(data_gen_train):
-    for each in data_gen_train:
-        img = each[-2]
-        x_img = cv2.imread(img['filepath'])
-        y_img = img['bboxes']  # list of dict
-        y_df = pd.DataFrame(y_img)  # df
-        y_df.x1 = str(y_df.x1)  # int to str
-        y_df.x2 = str(y_df.x2)
-        y_df.y1 = str(y_df.y1)
-        y_df.y2 = str(y_df.y2)
+ds = tf.data.Dataset.from_generator(toy,
+                                    (tf.int64, tf.int64),
+                                    (tf.TensorShape(None), tf.TensorShape(None))
+                                    )
 
-        x_tensor = tf.convert_to_tensor(x_img)
-        y_tensor = tf.convert_to_tensor(y_df)
-        id = tf.convert_to_tensor(each[-1]) # last element returned
+def toy2():
+    for i in range(3):
+        yield {'a': i, 'b': i+1}
 
+ds2 = tf.data.Dataset.from_generator(toy2,
+                                    ({'a': tf.int64, 'b': tf.int64}),
+                                     ({'a': tf.TensorShape(None), 'b': tf.TensorShape(None)})
+                                    )
 
-        mydict = collections.OrderedDict()
-        mydict['x_img'] = x_tensor
-        mydict['y_img'] = y_tensor
-        mydict['id'] = id
-        yield mydict
+def toy3():
+    for i in range(3):
+        yield tf.data.Dataset.from_tensors({'a': i, 'b': i+1})
+
+ds3 = tf.data.Dataset.from_generator(toy2,
+                                    ({'a': tf.int64, 'b': tf.int64}),
+                                     ({'a': tf.TensorShape(None), 'b': tf.TensorShape(None)})
+                                    )
+
+tf.ragged.constant({'a': 1, 'b': 2})

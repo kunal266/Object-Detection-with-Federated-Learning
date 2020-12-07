@@ -1,5 +1,6 @@
 codes/data
 codes/imagesBox
+codes/*.h5
 codes/*.csv
 *.xml
 *.jpg
