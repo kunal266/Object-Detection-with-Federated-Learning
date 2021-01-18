@@ -1,0 +1,79 @@
+All scripts are developed under environment py369 and the specific package version are:
+
+Python 3.6.9
+
+(py369) C:\Users\Leyan>conda list
+# packages in environment at C:\Users\Leyan\anaconda3\envs\py369:
+#
+# Name                    Version                   Build  Channel
+absl-py                   0.11.0                   pypi_0    pypi
+astor                     0.8.1                    pypi_0    pypi
+blas                      1.0                         mkl    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+cached-property           1.5.2                    pypi_0    pypi
+certifi                   2020.12.5        py36haa95532_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+colorama                  0.4.4                      py_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+decorator                 4.4.2                      py_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+gast                      0.4.0                    pypi_0    pypi
+google-pasta              0.2.0                    pypi_0    pypi
+grpcio                    1.34.0                   pypi_0    pypi
+h5py                      2.10.0           py36h5e291fa_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+hdf5                      1.10.4               h7ebc959_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+icc_rt                    2019.0.0             h0cc432a_1    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+importlib-metadata        3.1.1                    pypi_0    pypi
+intel-openmp              2020.2                      254    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+ipykernel                 5.3.4            py36h5ca1d4c_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+ipython                   6.1.0                    py36_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/free
+ipython_genutils          0.2.0              pyhd3eb1b0_1    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+jedi                      0.10.2                   py36_2    https://mirrors.ustc.edu.cn/anaconda/pkgs/free
+joblib                    0.17.0                   pypi_0    pypi
+jupyter_client            6.1.7                      py_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+jupyter_core              4.7.0            py36haa95532_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+keras                     2.0.3                    pypi_0    pypi
+keras-applications        1.0.8                    pypi_0    pypi
+keras-preprocessing       1.1.2                    pypi_0    pypi
+libsodium                 1.0.18               h62dcd97_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+markdown                  3.3.3                    pypi_0    pypi
+mkl                       2020.2                      256    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+mkl-service               2.3.0            py36h196d8e1_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+mkl_fft                   1.2.0            py36h45dec08_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+mkl_random                1.1.1            py36h47e9c7a_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+numpy                     1.19.4                   pypi_0    pypi
+numpy-base                1.19.2           py36ha3acd2a_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+opencv-python             4.4.0.46                 pypi_0    pypi
+pandas                    1.1.3            py36ha925a31_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+pickleshare               0.7.5           pyhd3eb1b0_1003    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+pip                       20.3             py36haa95532_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+prompt_toolkit            1.0.15                   py36_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/free
+protobuf                  3.14.0                   pypi_0    pypi
+pygments                  2.7.3              pyhd3eb1b0_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+pyreadline                2.1                      py36_1    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+python                    3.6.9                h5500b2f_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+python-dateutil           2.8.1                      py_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+pytz                      2020.4             pyhd3eb1b0_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+pywin32                   227              py36he774522_1    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+pyyaml                    5.3.1                    pypi_0    pypi
+pyzmq                     20.0.0           py36hd77b12b_1    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+scikit-learn              0.23.2                   pypi_0    pypi
+scipy                     1.5.4                    pypi_0    pypi
+setuptools                50.3.2           py36haa95532_2    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+simplegeneric             0.8.1                    py36_2    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+six                       1.15.0           py36haa95532_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+sqlite                    3.33.0               h2a8f88b_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+tensorboard               1.14.0                   pypi_0    pypi
+tensorflow-estimator      1.14.0                   pypi_0    pypi
+tensorflow-gpu            1.14.0                   pypi_0    pypi
+termcolor                 1.1.0                    pypi_0    pypi
+theano                    1.0.5                    pypi_0    pypi
+threadpoolctl             2.1.0                    pypi_0    pypi
+tornado                   6.1              py36h2bbff1b_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+traitlets                 4.3.3                    py36_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+vc                        14.1                 h0510ff6_4    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+vs2015_runtime            14.16.27012          hf0eaf9b_3    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+wcwidth                   0.2.5                      py_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+werkzeug                  1.0.1                    pypi_0    pypi
+wheel                     0.36.0             pyhd3eb1b0_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+wincertstore              0.2              py36h7fe50ca_0    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+wrapt                     1.12.1                   pypi_0    pypi
+zeromq                    4.3.3                ha925a31_3    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
+zipp                      3.4.0                    pypi_0    pypi
+zlib                      1.2.11               h62dcd97_4    https://mirrors.ustc.edu.cn/anaconda/pkgs/main
