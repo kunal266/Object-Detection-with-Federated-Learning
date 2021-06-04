@@ -13,6 +13,11 @@ The repository contains:
 - Runing environment for federated faster r-cnn
 - Augmented VOC2007 and VOC2012 data 
 
+Functions of scripts in `codes`:
+- `simple_parser.py`:
+- `augment.py`:
+
+
 ## Related Efforts
 - Federated learning in image classification using MNIST dataset: https://www.tensorflow.org/federated/tutorials/federated_learning_for_image_classification
 - Federated learing in text generation using Shakespeare dataset: https://www.tensorflow.org/federated/tutorials/federated_learning_for_text_generation
@@ -25,3 +30,5 @@ The repository contains:
 `numpy`
 `opencv-python`
 `sklearn`
+
+**See compatiility at https://github.com/tensorflow/federated#compatibility **
