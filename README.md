@@ -31,4 +31,4 @@ Functions of scripts in `codes`:
 `opencv-python`
 `sklearn`
 
-**See compatiility at https://github.com/tensorflow/federated#compatibility **
+**See compatiility at https://github.com/tensorflow/federated#compatibility**
