@@ -11,7 +11,8 @@ The repository contains:
 - Augmented VOC2007 and VOC2012 data 
 
 ## Related Efforts
-Before adopting 
+- Federated learning in image classification using MNIST dataset: https://www.tensorflow.org/federated/tutorials/federated_learning_for_image_classification
+- Federated learing in text generation using Shakespeare dataset: https://www.tensorflow.org/federated/tutorials/federated_learning_for_text_generation
 
-## Install
-## Usage
+## Required installation
+
