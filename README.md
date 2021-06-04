@@ -17,9 +17,6 @@ Functions of scripts in `codes`:
 - `simple_parser.py`:
 - `augment.py`:
 
-
-## Related Efforts
-
 Learn how TFF works first at simple tasks:
 
 - Federated learning in image classification using MNIST dataset: https://www.tensorflow.org/federated/tutorials/federated_learning_for_image_classification
@@ -34,4 +31,4 @@ Learn how TFF works first at simple tasks:
 `opencv-python`
 `sklearn`
 
-**See compatiility at https://github.com/tensorflow/federated#compatibility**
+**See important compatiility at https://github.com/tensorflow/federated#compatibility**
