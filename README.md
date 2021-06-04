@@ -2,7 +2,10 @@
 
 ## Background
 The Object Detection with Federated Learning project is for giving proof of concept (POC) on the application of federated learning on intelligent connected vehicle networks during my internship at Audi China R&D .
-In this projecct, we adpoted Faster R-CNN from the object detection algorithms into Tensorflow Federated (TFF) framework. 
+In this projecct, we adpoted Faster R-CNN from the object detection algorithms into Tensorflow Federated (TFF) framework.
+- To simulate real-world scenario, VOC2007 and VOC2012 were augmented with duplication and random rotation.
+- Data and object distribution 
+- Simulated client and server
 
 The repository contains:
 - Examples in federated learning
@@ -17,6 +20,7 @@ The repository contains:
 ## Required installation
 `h5py`
 `tensorflow`
+`tensorflow-gpu==1.14.0 `
 `Keras==2.0.3`
 `numpy`
 `opencv-python`
