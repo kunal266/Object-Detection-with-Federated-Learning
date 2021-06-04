@@ -2,7 +2,7 @@
 
 ## Background
 Give proof of concept (POC) on the application of federated learning on building object detection in autonomous driving settings during internship at Audi China R&D.
-In this projecct, we adpoted Faster R-CNN algorithm in building an object detection model under Tensorflow Federated (TFF) framework. 
+In this projecct, we adopted Faster R-CNN algorithm in building an object detection model under Tensorflow Federated (TFF) framework. 
 
 - Augment VOC2007 and VOC2012 with duplication and random rotation
 - Random assign all data to artificial clients (N= 50, 100, 500)
@@ -13,8 +13,9 @@ The repository contains:
 - Runing environment for faster r-cnn and federated faster r-cnn
 
 Functions of scripts in `codes`:
-- `simple_parser.py`:
-- `augment.py`:
+- `simple_parser.py`: Convert train data format
+- `augment.py`: Augment train data with horizontal, vertical flip and random rotation
+- `config.py`: Pass train settings
 
 **Learn how TFF works at simple tasks:**
 
